@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MedServicePrice.kz</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="MedServicePrice home">
+      <span class="logo">M</span>
+      <span><b>MedServicePrice.kz</b><small>Сравнение цен на медуслуги</small></span>
+    </a>
+    <nav class="navActions">
+      <a class="navBtn" href="#search">Поиск</a>
+      <a class="navBtn" href="#ai">AI помощник</a>
+      <a class="navBtn ghost" href="#services">Услуги</a>
+    </nav>
+  </header>
+
+  <main id="top" class="page">
+    <section class="hero">
+      <div class="heroText">
+        <h1>Найдите медицинскую услугу по лучшей цене</h1>
+        <p>Сравниваем цены клиник и лабораторий Казахстана, понимаем синонимы вроде «оак» и показываем результаты рядом с картой.</p>
+        <div class="heroActions">
+          <a class="button primaryLink" href="#search">🔎 Начать поиск</a>
+          <a class="button secondaryLink" href="#ai">✨ Спросить AI</a>
+        </div>
+      </div>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section id="search" class="panel searchPanel">
+      <div class="panelHead">
+        <div>
+          <h2>Поиск и сравнение</h2>
+          <p>Введите услугу: «оак», «cbc», «узи живот», «терапевт».</p>
+        </div>
+        <span id="normalized" class="normalized"></span>
+      </div>
+      <div class="searchLine">
+        <div class="searchBox">
+          <span class="searchIcon">🔍</span>
+          <input id="q" list="suggestions" placeholder="Например: ОАК, терапевт, УЗИ брюшной полости" autocomplete="off" />
+          <datalist id="suggestions"></datalist>
+        </div>
+        <button id="searchBtn" class="button primary">Найти</button>
+      </div>
+      <div class="filters">
+        <select id="city"><option value="">Все города</option></select>
+        <select id="category"><option value="">Все категории</option></select>
+        <select id="sort"><option value="price_asc">Сначала дешевле</option><option value="price_desc">Сначала дороже</option><option value="rating">По рейтингу</option></select>
+        <input id="maxPrice" type="number" value="1000000" min="0" step="500" placeholder="Макс. цена" />
+      </div>
+    </section>
+
+    <section class="resultsMapLayout">
+      <div class="resultsColumn">
+        <div class="sectionTitle"><h2>Результаты</h2><span id="resultCount">0 найдено</span></div>
+        <div id="results" class="cards"></div>
+      </div>
+      <aside id="map" class="mapWrap">
+        <div class="mapHeader"><b>Карта клиник</b><span>по текущей выдаче</span></div>
+        <div id="mapBox"></div>
+        <div class="mapNote">Карта показывает доступные координаты источников. Точный адрес смотри в карточке и на сайте клиники.</div>
+      </aside>
+    </section>
+
+    <section id="ai" class="panel aiPanel">
+      <div class="panelHead">
+        <div>
+          <h2>AI помощник</h2>
+          <p>Опишите симптомы простыми словами. AI предложит услуги из справочника, но не ставит диагноз.</p>
+        </div>
+      </div>
+      <div class="chatBox">
+        <div class="inputShell">
+          <textarea id="aiMessage" placeholder="Например: у меня болит живот и тошнит уже второй день"></textarea>
+        </div>
+        <button id="aiBtn" class="button aiButton">✨ Получить рекомендации</button>
+      </div>
+      <div id="aiAnswer" class="aiAnswer hidden"></div>
+    </section>
+
+    <section id="services" class="panel servicesPanel">
+      <div class="panelHead">
+        <div>
+          <h2>Популярные услуги</h2>
+          <p>Нажмите на услугу, чтобы сразу увидеть цены.</p>
+        </div>
+      </div>
+      <div id="serviceChips" class="chips"></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

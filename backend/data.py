@@ -1,0 +1,14 @@
+STANDARD_SOURCES = [
+    {"name": "KDL Kazakhstan", "url": "https://kdl.kz", "city": "Алматы", "address": "ул. Байзакова 280", "phone": "+7 727 339 99 99", "lat": 43.2381, "lon": 76.9207, "rating": 4.8, "online": True, "source_type": "Лаборатория"},
+    {"name": "KDL Olimp", "url": "https://kdlolymp.kz", "city": "Астана", "address": "пр. Кабанбай Батыра 46", "phone": "+7 7172 58 00 58", "lat": 51.1282, "lon": 71.4304, "rating": 4.8, "online": True, "source_type": "Лаборатория"},
+    {"name": "DOQ.kz", "url": "https://doq.kz", "city": "Алматы", "address": "агрегатор клиник, точный адрес зависит от выбранной клиники", "phone": "+7 777 000 10 10", "lat": 43.2389, "lon": 76.8897, "rating": 4.7, "online": True, "source_type": "Агрегатор"},
+    {"name": "INVITRO Kazakhstan", "url": "https://invitro.kz", "city": "Алматы", "address": "пр. Достык 85", "phone": "+7 727 000 22 33", "lat": 43.2367, "lon": 76.9561, "rating": 4.6, "online": True, "source_type": "Лаборатория"},
+    {"name": "Helix Kazakhstan", "url": "https://helix.kz", "city": "Шымкент", "address": "пр. Тауке хана 18", "phone": "+7 7252 00 44 55", "lat": 42.3167, "lon": 69.5958, "rating": 4.5, "online": False, "source_type": "Лаборатория"},
+    {"name": "Олимп Медцентр", "url": "https://olymp.kz", "city": "Алматы", "address": "ул. Жандосова 21", "phone": "+7 727 000 66 77", "lat": 43.2236, "lon": 76.9082, "rating": 4.7, "online": True, "source_type": "Медцентр"},
+    {"name": "МЕДЭЛ", "url": "https://medel.kz", "city": "Астана", "address": "ул. Сыганак 29", "phone": "+7 7172 00 88 99", "lat": 51.1047, "lon": 71.4246, "rating": 4.4, "online": False, "source_type": "Клиника"},
+    {"name": "Aksai Clinic", "url": "https://aksai-clinic.kz", "city": "Актобе", "address": "пр. Абилкайыр хана 40", "phone": "+7 7132 00 12 12", "lat": 50.2839, "lon": 57.1660, "rating": 4.3, "online": False, "source_type": "Региональная клиника"},
+    {"name": "МЦК", "url": "https://mck.kz", "city": "Павлодар", "address": "ул. Академика Сатпаева 136", "phone": "+7 7182 00 55 55", "lat": 52.2873, "lon": 76.9674, "rating": 4.2, "online": True, "source_type": "Медцентр"},
+    {"name": "Городская поликлиника Алматы", "url": "https://almaty-clinic.kz", "city": "Алматы", "address": "ул. Толе би 94", "phone": "+7 727 000 31 31", "lat": 43.2550, "lon": 76.9286, "rating": 4.1, "online": False, "source_type": "Городская клиника"},
+    {"name": "Городская поликлиника Астана", "url": "https://astana-clinic.kz", "city": "Астана", "address": "пр. Республики 12", "phone": "+7 7172 000 32 32", "lat": 51.1694, "lon": 71.4491, "rating": 4.2, "online": False, "source_type": "Городская клиника"},
+    {"name": "Областная клиника Шымкент", "url": "https://shymkent-clinic.kz", "city": "Шымкент", "address": "ул. Байтурсынова 20", "phone": "+7 7252 000 33 33", "lat": 42.3417, "lon": 69.5901, "rating": 4.0, "online": False, "source_type": "Областная клиника"},
+]
